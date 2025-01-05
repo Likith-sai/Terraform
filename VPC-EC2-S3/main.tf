@@ -4,15 +4,15 @@ resource "aws_vpc" "myvpc" {
 
 resource "aws_subnet" "sub1" {
     vpc_id = aws_vpc.myvpc.id
-    cidr_block = "10.0.0.0/24"
-    availability_zone = "ap-south-1a"
+    cidr_block = var.cid_sub1
+    availability_zone = var.az_sub1
     map_public_ip_on_launch = true
 }
 
 resource "aws_subnet" "sub2" {
     vpc_id = aws_vpc.myvpc.id
-    cidr_block = "10.0.1.0/24"
-    availability_zone = "ap-south-1b"
+    cidr_block = var.cid_sub2
+    availability_zone = var.az_sub2
     map_public_ip_on_launch = true
 }
 
@@ -68,12 +68,12 @@ resource "aws_security_group" "mysg" {
 }
 
 resource "aws_s3_bucket" "somes3" {
-    bucket = "likiths32025"
+    bucket = "likith052024"
 }
 
 resource "aws_instance" "webserver1" {
-    ami = "ami-053b12d3152c0cc71"
-    instance_type = "t2.micro"
+    ami = var.ami_vm
+    instance_type = var.instance_type
     vpc_security_group_ids = [aws_security_group.mysg.id]
     subnet_id = aws_subnet.sub1.id
     user_data = base64encode(file("user.sh"))
