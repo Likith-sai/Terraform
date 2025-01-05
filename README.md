@@ -19,4 +19,4 @@ With Terraform, you can create and manage infrastructure on multiple platforms s
 6. Reusable Modules: Allows the use of pre-defined templates to manage complex infrastructure.
 
 **Terraform Projects**
-1. Create EC2 Instances, S3 bucket and VPC where In VPC, we will be adding the Internet Gateway, Route tables and their association with VM communciation, Security Groups and Application LoadBalancer on AWS provider.
+1. Create EC2 Instances, S3 bucket and VPC where In VPC, we will be adding the Internet Gateway, Route tables and their association with VM communciation, Security Groups and Application LoadBalancer on AWS provider. --> REPO NAME: VPC-EC2-S3
