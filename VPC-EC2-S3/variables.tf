@@ -1,28 +1,28 @@
 variable "cidr" {
-    default = "10.0.0.0/16"
+    default = "VPC_CIDR"
   
 }
 
 variable "cid_sub1" {
-    default = "10.0.0.0/24"
+    default = "SUBNET_IP_RANGE"
 }
 
 variable "cid_sub2" {
-    default = "10.0.1.0/24"
+    default = "SUBNET_IP_RANGE"
 }
 
 variable "az_sub1" {
-    default = "ap-south-1a"
+    default = "AVAILABILITY_ZONES"
 }
 
 variable "az_sub2" {
-    default = "ap-south-1b"
+    default = "AVAILABILITY_ZONES"
 }
 
 variable "ami_vm" {
-    default = "ami-053b12d3152c0cc71"
+    default = "AMI_ID"
 }
 
 variable "instance_type" {
-    default = "t2.micro"
+    default = "INSTANCE_TYPE"
 }
